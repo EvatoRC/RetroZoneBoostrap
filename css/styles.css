@@ -1,0 +1,349 @@
+:root {
+    /* Paleta retro */
+    --win-gris: #c0c0c0;
+    --win-gris-claro: #ececec;
+    --win-gris-oscuro: #808080;
+    --win-negro: #000000;
+    --win-blanco: #ffffff;
+    --win-azul: #000080;
+    --win-celeste: #1084d0;
+
+    --color-celeste: rgb(5, 133, 156);
+    --color-rojo: rgb(243, 99, 46);
+    --color-amarillo: rgb(250, 199, 5);
+    --color-verde: rgb(102, 197, 87);
+
+    --font-type: 'Tahoma', 'Segoe UI', Verdana, Arial, sans-serif;
+
+    --borde-outset: 2px outset var(--win-gris-claro);
+    --borde-inset: 2px inset var(--win-gris-claro);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--win-gris-oscuro);
+    color: var(--win-negro);
+    font-family: var(--font-type);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-type);
+    font-weight: 700;
+}
+
+/* ===== Ventana contenedora ===== */
+.window {
+    max-width: 1100px;
+    margin: 2rem auto;
+    background-color: var(--win-gris);
+    border: 2px solid var(--win-blanco);
+    border-right-color: var(--win-negro);
+    border-bottom-color: var(--win-negro);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Barra de título superior */
+.title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    background: linear-gradient(90deg, var(--win-azul), var(--win-celeste));
+    color: var(--win-blanco);
+    padding: 0.4rem 0.75rem;
+}
+
+.title-bar-text {
+    font-weight: 700;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.title-bar-controls {
+    display: flex;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.tb-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 18px;
+    background-color: var(--win-gris);
+    color: var(--win-negro);
+    border: var(--borde-outset);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.tb-close {
+    background-color: var(--color-rojo);
+    color: var(--win-blanco);
+}
+
+/* ===== Navbar de Bootstrap ===== */
+.navbar-retro {
+    background-color: var(--win-gris);
+    border-bottom: 2px solid var(--win-gris-oscuro);
+    padding: 0.5rem 1rem;
+}
+
+.navbar-retro .navbar-brand {
+    font-weight: 700;
+    color: var(--win-negro);
+}
+
+.navbar-retro .nav-link {
+    background-color: var(--win-gris);
+    border: var(--borde-outset);
+    padding: 0.4rem 0.9rem !important;
+    margin: 0.15rem;
+    color: var(--win-negro) !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.navbar-retro .nav-link:hover,
+.navbar-retro .nav-link:focus-visible {
+    background-color: var(--win-gris-claro);
+}
+
+.navbar-retro .nav-link:active {
+    border: var(--borde-inset);
+}
+
+.navbar-retro .navbar-toggler {
+    border: var(--borde-outset);
+    border-radius: 0;
+}
+
+/* ===== Carrusel ===== */
+.carousel-retro {
+    border: var(--borde-outset);
+    background-color: var(--win-negro);
+}
+
+.carousel-retro .carousel-item {
+    height: 55vh;
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-retro .carousel-caption {
+    left: 5%;
+    right: 5%;
+    bottom: 1.5rem;
+    background-color: var(--win-gris);
+    color: var(--win-negro);
+    border: var(--borde-outset);
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.carousel-retro .carousel-caption h3 {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: var(--color-rojo);
+}
+
+/* ===== Contenido principal ===== */
+main {
+    background-color: var(--win-gris-claro);
+    padding: 2rem 1.5rem;
+}
+
+section {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px dashed var(--win-gris-oscuro);
+}
+
+section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.section-title {
+    display: inline-block;
+    background-color: var(--color-verde);
+    color: var(--win-blanco);
+    padding: 0.35rem 0.9rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    border: var(--borde-outset);
+}
+
+#productos .section-title {
+    background-color: var(--color-amarillo);
+    color: var(--win-negro);
+}
+
+#contacto .section-title {
+    background-color: var(--color-rojo);
+}
+
+#inicio strong {
+    color: var(--color-rojo);
+}
+
+/* Tarjetas (grid de 3 columnas) */
+.feature-box {
+    background-color: var(--win-gris);
+    border: var(--borde-outset);
+    padding: 1.25rem;
+    height: 100%;
+    text-align: center;
+}
+
+.feature-box .icon-frame {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    background-color: var(--win-blanco);
+    border: var(--borde-inset);
+}
+
+/* ===== Cards de producto ===== */
+.card-retro {
+    border: var(--borde-outset);
+    border-radius: 0;
+    background-color: var(--win-gris);
+    height: 100%;
+}
+
+.card-retro .card-img-top {
+    background-color: var(--win-blanco);
+    padding: 0.5rem;
+    height: 180px;
+    object-fit: contain;
+}
+
+.card-retro:nth-of-type(odd) {
+    border-top: 5px solid var(--color-celeste);
+}
+
+.card-retro:nth-of-type(even) {
+    border-top: 5px solid var(--color-rojo);
+}
+
+.card-retro .card-title {
+    font-size: 1rem;
+}
+
+.card-retro .card-text {
+    font-size: 0.85rem;
+    color: #333;
+}
+
+/* Card destacada */
+.card-featured {
+    border: var(--borde-outset);
+    border-top: 5px solid var(--color-amarillo);
+    background-color: #fffceb;
+    border-radius: 0;
+}
+
+.card-featured .card-img-top {
+    height: 100%;
+    object-fit: cover;
+    min-height: 220px;
+}
+
+
+@media (min-width: 768px) {
+    .card-featured.flex-md-row .card-img-md-left {
+        width: 40%;
+        border-right: var(--borde-outset);
+    }
+
+    .card-featured.flex-md-row .card-body {
+        width: 60%;
+    }
+}
+
+.card-featured .card-title {
+    color: var(--color-rojo);
+}
+
+/* ===== Botones estilo win98 ===== */
+.btn-retro {
+    background-color: var(--color-celeste);
+    color: var(--win-blanco) !important;
+    border: var(--borde-outset);
+    border-radius: 0;
+    padding: 0.5rem 1.1rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.btn-retro:hover {
+    color: var(--win-blanco);
+    opacity: 0.92;
+}
+
+.btn-retro:active {
+    border: var(--borde-inset);
+}
+
+/* Panel de contacto */
+.panel-retro {
+    background-color: var(--win-gris);
+    border: var(--borde-inset);
+    padding: 1.25rem;
+}
+
+/* ===== Pie de página ===== */
+footer.site-footer {
+    background-color: var(--win-gris);
+    border-top: 1px solid var(--win-blanco);
+    padding: 1rem 1.5rem;
+}
+
+footer.site-footer p {
+    font-size: 0.8rem;
+    color: #333;
+    margin-bottom: 0.2rem;
+}
+
+footer.site-footer p::before {
+    content: "🕹️ ";
+}
+
+footer.site-footer strong {
+    color: var(--color-rojo);
+}
+
+.footer-social a {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--win-celeste);
+    text-decoration: none;
+}
+
+/* ===== Ajustes para pantallas pequeñas ===== */
+@media (max-width: 576px) {
+    main {
+        padding: 1.25rem 0.9rem;
+    }
+
+    .carousel-retro .carousel-item {
+        height: 40vh;
+        min-height: 240px;
+    }
+
+    .carousel-retro .carousel-caption p {
+        display: none; /* en móvil queda solo el título paar no saturar */
+    }
+}

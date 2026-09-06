@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Zone - Tienda de Videojuegos Retro</title>
+
+  <!-- Bootstrap (CDN) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="window" id="app-window">
+
+    <!-- Barra de título  -->
+    <header id="site-header" class="title-bar">
+      <p class="title-bar-text mb-0">
+        <span class="title-icon">🕹️</span> Retro Zone — Tienda de videojuegos y entretenimiento
+      </p>
+      <div class="title-bar-controls" aria-hidden="true">
+        <span class="tb-btn">_</span>
+        <span class="tb-btn">▢</span>
+        <span class="tb-btn tb-close">×</span>
+      </div>
+    </header>
+
+    <!-- ============ NAVBAR ============ -->
+    <!-- navbar-expand-lg quye se colapsa en un menú hamburguesa -->
+    <nav class="navbar navbar-expand-lg navbar-retro">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#inicio">💾 Retro Zone</a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navRetro"
+                aria-controls="navRetro" aria-expanded="false"
+                aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navRetro">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">🏠 Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#productos">💽 Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">✉️ Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+
+      <!-- ============ CARRUSEL ============ -->
+      <!-- la imagen cambia cada 3 segundos -->
+      <div id="carruselRetro" class="carousel slide carousel-retro mb-5"
+           data-bs-ride="carousel" data-bs-interval="3000">
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carruselRetro" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+          <button type="button" data-bs-target="#carruselRetro" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+          <button type="button" data-bs-target="#carruselRetro" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
+          <button type="button" data-bs-target="#carruselRetro" data-bs-slide-to="3" aria-label="Diapositiva 4"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background-image: url('img/warcraft_frozen_throne.jpg');">
+            <div class="carousel-caption">
+              <h3>Warcraft III: The Frozen Throne</h3>
+              <p>La expansión que consolidó la saga de Warcraft como referente absoluto del RTS, con la caída y ascenso del Rey Exánime.</p>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('img/starcraft_broodwar.jpg');">
+            <div class="carousel-caption">
+              <h3>StarCraft: Brood War</h3>
+              <p>Terran, Zerg y Protoss en guerra por la galaxia; la expansión que convirtió a StarCraft en leyenda del esport.</p>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('img/age_of_empires.jpg');">
+            <div class="carousel-caption">
+              <h3>Age of Empires: Definitive Edition</h3>
+              <p>Lidera civilizaciones antiguas, desde griegos hasta babilonios, en el remaster del RTS histórico que marcó una época.</p>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('img/age_of_mythology.jpg');">
+            <div class="carousel-caption">
+              <h3>Age of Mythology</h3>
+              <p>Dioses, mitos y héroes legendarios de Grecia, Egipto y Escandinavia se unen en este clásico de Ensemble Studios.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carruselRetro" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carruselRetro" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+
+      <!-- ============ INICIO y GRID ============ -->
+      <section id="inicio" class="container">
+        <h2 class="section-title">Bienvenidos a Retro Zone</h2>
+
+        <div class="row g-4 align-items-center mb-4">
+          <div class="col-12 col-lg-7">
+            <p class="fs-5">
+              Encuentra videojuegos <strong>Oldies</strong> de PC y disfruta de tus
+              aventuras favoritas de los 90, remasterizadas para correr en cualquier equipo moderno.
+            </p>
+          </div>
+          <div class="col-12 col-lg-5">
+            <img src="img/LAN_party.jpg" class="img-fluid" alt="Grupo de personas jugando en una LAN party retro" style="border: var(--borde-outset);">
+          </div>
+        </div>
+
+        <!-- Grid de 3 columnas -->
+        <div class="row g-3">
+          <div class="col-12 col-md-4">
+            <div class="feature-box">
+              <div class="icon-frame">🚚</div>
+              <h3 class="h6">Envío rápido</h3>
+              <p class="small mb-0">Despachos a todo Chile en 24-48 horas.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="feature-box">
+              <div class="icon-frame">💿</div>
+              <h3 class="h6">Discos originales</h3>
+              <p class="small mb-0">Copias físicas verificadas, sin piratería.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="feature-box">
+              <div class="icon-frame">🎮</div>
+              <h3 class="h6">Soporte gamer</h3>
+              <p class="small mb-0">Te ayudamos a correr tus juegos en Windows moderno.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PRODUCTOS ============ -->
+      <section id="productos" class="container">
+        <h2 class="section-title">Productos destacados</h2>
+
+        <div class="row g-4">
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card card-retro">
+              <img src="img/doom.jfif" class="card-img-top" alt="Portada del videojuego Doom">
+              <div class="card-body">
+                <h3 class="card-title">Doom</h3>
+                <p class="card-text">
+                  Acción frenética, demonios y toneladas de balas; un clásico que definió
+                  el género de los shooters en primera persona.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card card-retro">
+              <img src="img/duke_nukem_3d.jfif" class="card-img-top" alt="Portada del videojuego Duke Nukem 3D">
+              <div class="card-body">
+                <h3 class="card-title">Duke Nukem 3D</h3>
+                <p class="card-text">
+                  Humor irreverente, armas descomunales y acción desenfrenada en uno de los
+                  grandes clásicos de los shooters de los 90.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card card-retro">
+              <img src="img/heretic.jfif" class="card-img-top" alt="Portada del videojuego Heretic">
+              <div class="card-body">
+                <h3 class="card-title">Heretic</h3>
+                <p class="card-text">
+                  Magia oscura, monstruos infernales y combates frenéticos en un clásico de
+                  fantasía oscura nacido de la era dorada de los FPS.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta destacada -->
+          <div class="col-12">
+            <div class="card card-featured flex-md-row">
+              <img src="img/LAN_party.jpg" class="card-img-top card-img-md-left" alt="Imagen de una LAN party retro">
+              <div class="card-body">
+                <h3 class="card-title">Videojuegos para todos</h3>
+                <p class="card-text">
+                  Revive la experiencia Retro. LAN parties, teclados mecánicos y noches sin
+                  dormir jugando con amigos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============ CONTACTO ============ -->
+      <section id="contacto" class="container">
+        <h2 class="section-title">Contacto</h2>
+
+        <div class="panel-retro d-flex flex-wrap align-items-center justify-content-between gap-3">
+          <p class="mb-0">
+            Para más información, escríbenos a
+            <strong>contacto@RetroZone.cl</strong>
+          </p>
+          <a href="mailto:contacto@RetroZone.cl" class="btn btn-retro">✉️ Enviar correo</a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer d-flex flex-wrap align-items-center justify-content-between gap-3">
+      <div class="footer-info">
+        <p>&copy; 2026 Retro Games. Todos los derechos reservados.</p>
+        <p>Av. Providencia 1234, Santiago, Chile</p>
+        <p>Correo: contacto@retrogames.cl</p>
+      </div>
+      <ul class="footer-social list-unstyled d-flex gap-3 mb-0">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">X</a></li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
